@@ -42,3 +42,7 @@ gem 'thor', '0.20.0'
 group :development do
   gem 'listen', '~> 3.1.5'
 end
+
+gem 'devise'
+
+gem 'bootstrap', '~> 4.0.0'
