@@ -27,4 +27,15 @@ class QuizzesController < ApplicationController
   def update
     @quiz = Quiz.find(params[:id])
   end
+  
+  def create
+    @quiz = Quiz.new
+    @quiz.title = params[:quiz][:title]
+    @quiz.category = params[:quiz][:category]
+    @quiz.employer = current_user
+  end
+  
+  def update
+    @quiz = Quiz.find(params[:id])
+  end
 end
