@@ -153,7 +153,8 @@
       <section id="main-content">
           <section class="wrapper">
           <div class="row">
-            <button type="button" class="btn-theme">Create Your Quiz</button>
+            <%= link_to "Create Quiz", new_employer_quiz_path(current_employer.id), method: :get, class: 'btn btn-theme' %>
+            <!--<button type="button" class="btn-theme">Create Your Quiz</button>-->
           </div>
               <div class="row">
                   <div class="col-lg-9 main-chart">

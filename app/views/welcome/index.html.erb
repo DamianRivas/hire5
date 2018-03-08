@@ -28,10 +28,12 @@
               <% elsif candidate_signed_in? %>
                 <%= link_to "Sign Out", destroy_candidate_session_path, method: :delete %>
               <% else %>
-                <%= link_to "Sign In", root_path %>
+                <%= link_to "Sign In", new_employer_session_path %>
               <% end %>
             </li> 
-            <li>&nbsp; &nbsp;<a href="#">Create Profile</a></li> 
+            <li>&nbsp; &nbsp;
+              <%= link_to "Create Profile", new_employer_registration_path %>
+            </li> 
           </ul>
         </div><!--/.navbar-collapse -->
       
