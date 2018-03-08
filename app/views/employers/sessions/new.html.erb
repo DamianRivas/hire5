@@ -1,26 +1,69 @@
-<h2>Log in</h2>
+<%= stylesheet_link_tag "main" %>
+<%= stylesheet_link_tag "style" %>
+<%= stylesheet_link_tag "style-responsive" %>
+<%= stylesheet_link_tag "login" %>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="logo" href="index.html"><img src=<%= image_path("TP-White.png") %> alt="Logo"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>&nbsp; &nbsp;<a href="#">Home</a></li> 
+            <li>&nbsp; &nbsp;<a href="#">Take Quizzes</a></li> 
+            <li>&nbsp; &nbsp;
+              <% if employer_signed_in? %>
+                <%= link_to "Sign Out", destroy_employer_session_path, method: :delete %>
+              <% elsif candidate_signed_in? %>
+                <%= link_to "Sign Out", destroy_candidate_session_path, method: :delete %>
+              <% else %>
+                <%= link_to "Sign In", new_employer_session_path %>
+              <% end %>
+            </li> 
+            <li>&nbsp; &nbsp;
+              <%= link_to "Create Profile", new_employer_registration_path %>
+            </li> 
+          </ul>
+        </div><!--/.navbar-collapse -->
+      
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    
+    
+    
+<div class="container">
+  <h2>Log in</h2>
+  <div class="row">
+    <div class="col-md-8">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
+      
+        <div class="field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+      
+        <% if devise_mapping.rememberable? -%>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end -%>
+      
+        <div class="actions">
+          <%= f.submit "Log in", class: 'btn btn-success' %>
+        </div>
+      <% end %>
+    
+      <%= render "employers/shared/links" %>
+    </div>
   </div>
-<% end %>
-
-<%= render "employers/shared/links" %>
+</div>

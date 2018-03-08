@@ -21,4 +21,5 @@ Rails.application.config.assets.precompile += %w( zabuto_calendar.css )
 Rails.application.config.assets.precompile += %w( jquery.gritter.css )
 Rails.application.config.assets.precompile += %w( style1.css )
 Rails.application.config.assets.precompile += %w( quiz.css )
+Rails.application.config.assets.precompile += %w( login.css )
 
