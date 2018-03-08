@@ -8,7 +8,7 @@
                 <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation" style="color:white;"></div>
               </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>Hire five</b></a>
+            <b><%= link_to "Hire Five", dashboard_employer_path, class: 'logo' %></b>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <ul class="nav top-menu">
@@ -133,7 +133,9 @@
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
+            	  <li>
+                  <%= link_to "Logout", destroy_employer_session_path, method: :delete, class: 'logout' %>
+                </li>
             	</ul>
             </div>
         </header>
@@ -144,7 +146,7 @@
               <ul class="sidebar-menu" id="nav-accordion">
               
               	  <p class="centered"><a href="profile.html"><img src=<%= image_path("ui-sam.jpg") %> class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">Hire Five Dash Board</h5>
+              	  <h1 class="centered">Dashboard</h1>
               <!-- sidebar menu end-->
           </div>
       </aside>
