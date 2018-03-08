@@ -1,6 +1,6 @@
 #contact {width:80%; height:100%; margin 0 auto; background: #DDD; }
 
-.container {width:100%; height:auto; margin: 0 auto; padding: 50px 0;}
+.container {width:100%; height:auto; margin: 0 auto; padding: 0;}
 
 #contact .container form input,
 #contact .container form textarea {
@@ -12,7 +12,7 @@
 	letter-spacing:1px;
 	background: #FFF;
 	border:2px solid #FFF;
-	margin-bottom:25px;
+	margin-bottom:0px;
   -webkit-transition:all .1s ease-in-out;
 	-moz-transition:all .1s ease-in-out;
 	-ms-transition:all .1s ease-in-out;
@@ -53,3 +53,15 @@
 
 #contact .container form .required {
 	color:#b43838;}
+	
+	
+h1 {
+	margin: 30px 10px;
+	margin-bottom: 20px;
+}
+h2 {
+	margin: 10px;
+}
+h3 {
+	margin: 10px;
+}
