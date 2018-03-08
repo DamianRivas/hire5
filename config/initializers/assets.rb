@@ -17,3 +17,8 @@ Rails.application.config.assets.precompile += %w( main.css )
 Rails.application.config.assets.precompile += %w( animate.css )
 Rails.application.config.assets.precompile += %w( style.css )
 Rails.application.config.assets.precompile += %w( style-responsive.css )
+Rails.application.config.assets.precompile += %w( zabuto_calendar.css )
+Rails.application.config.assets.precompile += %w( jquery.gritter.css )
+Rails.application.config.assets.precompile += %w( style1.css )
+Rails.application.config.assets.precompile += %w( quiz.css )
+
